@@ -1,11 +1,67 @@
-iframe {
-  border: none;
-  height: 500px;
-  width: 100%;
+{
+  "options": {
+    "theme": "default",
+    "sslProxy": "https://example.com/ssl-proxy/",
+    "startPanel": "Transcript"
+  },
+  "extensions": {
+    "ChapterMarks": {},
+    "EpisodeInfo": {},
+    "Playlist": {},
+    "Transcript": {},
+    "SubscribeBar": {disabled: true}
+  },
+  "podcast": {
+    "title": "Podcast Title",
+    "feed": "hhttp://rss.castbox.fm/25f93b4692214f70b40260fa3dc2caba.xml",
+    "episodes": [
+     {
+      "media": {
+        "mp3": "https://example.com/media2.mp3",
+        "m4a": "https://example.com/media2.m4a",
+        "ogg": "https://example.com/media2.ogg",
+        "opus": "https://example.com/media2.opus"
+      },
+      "coverUrl": "https://example.com/cover.jpg",
+      "title": "Episode 2 title",
+      "subtitle": "Episode 2 subtitle",
+      "url": "http://example.com/episode-2",
+      "embedCode": "<script class=\"podigee-podcast-player\" src=\"https://cdn.podigee.com/podcast-player/javascripts/podigee-podcast-player.js\" data-configuration=\"https://example.com/episode-2.json\"><\/script>",
+      "description": "Episode 2 description",
+      "chaptermarks": [
+        {"start": "00:00:00", "title": "First chapter"},
+        {"start": "00:01:00", "title": "Second chapter"},
+        ...
+      ],
+      "transcript": "https://example.com/transcript-2.vtt"
+    },
+    ...
+  ],
+  },
+  "episode": {
+    "media": {
+      "mp3": "https://example.com/media.mp3",
+      "m4a": "https://example.com/media.m4a",
+      "ogg": "https://example.com/media.ogg",
+      "opus": "https://example.com/media.opus"
+    },
+    "coverUrl": "https://example.com/cover.jpg",
+    "title": "Episode title",
+    "subtitle": "Episode subtitle",
+    "url": "http://example.com/episode-1",
+    "embedCode": "<script class=\"podigee-podcast-player\" src=\"https://cdn.podigee.com/podcast-player/javascripts/podigee-podcast-player.js\" data-configuration=\"https://example.com/episode-1.json\"><\/script>",
+    "description": "Episode description",
+    "chaptermarks": [
+      {"start": "00:00:00", "title": "First chapter"},
+      {"start": "00:01:00", "title": "Second chapter"},
+      ...
+    ],
+    "transcript": "https://example.com/transcript.vtt"
+  }
 }
-
+      
+      
 <iframe style="border: solid 1px #dedede;"  src="https://app.stitcher.com/splayer/f/183478/55428034" width="400" height="150" frameborder="0" scrolling="no"></iframe>
 
 <a class="twitter-timeline" data-width="500" data-height="600" data-theme="dark" href="https://twitter.com/CloakDaggerPod?ref_src=twsrc%5Etfw">Tweets by CloakDaggerPod</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<iframe class="podigee-podcast-player" src="http://rss.castbox.fm/25f93b4692214f70b40260fa3dc2caba.xml"></script>
